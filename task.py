@@ -2,9 +2,8 @@
 # Bir classdan istifadə edərək 2 metod yazın.
 # İlk metodda dəyər olaraq bir list içərisində rəqəmləri alın  və onu bir listə əlavə edin ( bu şəkildə olacaq: mylist=[1,2,3,4,5])
 # Daha sonra bir metod daha yazın. Bu metodda isə bizim bir argumentimiz olacaq (Hədəf rəqəm). Burada ilk metodda aldığımız listin
-# dəyərləri içərisində hər hansı 2 rəqəmin cəmi verilmiş hədəf rəqəmə bərabərdirsə həmin rəqəmlərin indexlərini qaytarın. Əgər belə
-# rəqəmlər yoxdursa -1 cavabı qaytarın.
-
+# dəyərləri içərisində hər hansı 2 rəqəmin cəmi verilmiş hədəf rəqəmə bərabərdirsə həmin rəqəmlərin indexlərini qaytarın.
+# Əgər belə rəqəmlər yoxdursa -1 cavabı qaytarın.
 # Əlavə olaraq argumentləri hansı metodunuzda istifadə etmək istədiyiniz barəsində sərbəstsiniz və əlavə arqumentlərdən istifadə edəbilərsiniz.
 
 from random import randint
@@ -23,16 +22,23 @@ class Main:
 
     def hedef_deyer_yoxlama(self):
         self.hedef_deyer = int(input("hedef deyeri daxil edin:"))
-        eded_1 = self.list[randint(0, 4)]
-        eded_2 = self.list[randint(0, 4)]
-        print(f"{eded_1} --- {eded_2}")
+        indeks_1 = randint(0, 4)
+        indeks_2 = randint(0, 4)
 
-        if (eded_1 + eded_2) == self.hedef_deyer:
-            return [eded_1, eded_2]
+        # * Ternary Operator
+        # return (
+        #     f"indeks_1: {indeks_1} , indeks_2: {indeks_2}"
+        #     if (self.list[indeks_1] + self.list[indeks_2]) == (self.hedef_deyer)
+        #     else -1
+        # )
+
+        if (self.list[indeks_1] + self.list[indeks_2]) == self.hedef_deyer:
+            return f"indeks_1:{indeks_1} , indeks_2:{indeks_2}"
         else:
             return -1
 
 
+# -------------------------------------------------------------------------------------------------
 main = Main()
 main.list_al()
 print(main.list_goster())
