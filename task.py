@@ -24,6 +24,7 @@ class Main:
                     return f"list[{i}] = {my_list[i]}  ve list[{j}] = {my_list[j]}"
         return -1
 
+        # 2_Yol
         # for numbers in itertools.combinations(self.list, 2):
         #     if sum(numbers) == self.hedef:
         #         return [self.list.index(number) for number in numbers]
