@@ -6,8 +6,6 @@
 # Əgər belə rəqəmlər yoxdursa -1 cavabı qaytarın.
 # Əlavə olaraq argumentləri hansı metodunuzda istifadə etmək istədiyiniz barəsində sərbəstsiniz və əlavə arqumentlərdən istifadə edəbilərsiniz.
 
-from random import randint
-
 
 class Main:
     def __init__(self):
