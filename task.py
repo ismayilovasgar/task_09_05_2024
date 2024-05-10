@@ -15,11 +15,13 @@ class Main:
         return self.list
 
     def hedef_deyer_yoxlama(self):
-        self.hedef = int(input("hedef deyer daxil edin:"))
-        for i in range(len(self.list)):
-            for j in range(len(self.list)):
-                if (self.list[i] + self.list[j] == self.hedef) and (i != j):
-                    return f"indeksler: {i} ve {j} elementler"
+        my_hedef = self.hedef = int(input("hedef deyer daxil edin:"))
+        my_list = self.list
+
+        for i in range(len(my_list)):
+            for j in range(len(my_list)):
+                if (my_list[i] + my_list[j] == my_hedef) and (i != j):
+                    return f"list[{i}] = {my_list[i]}  ve list[{j}] = {my_list[j]}"
         return -1
 
         # for numbers in itertools.combinations(self.list, 2):
