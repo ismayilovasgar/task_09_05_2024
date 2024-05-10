@@ -15,12 +15,12 @@ class Main:
         return self.list
 
     def hedef_deyer_yoxlama(self):
-        my_hedef = self.hedef = int(input("hedef deyer daxil edin:"))
+        my_target = self.hedef = int(input("hedef deyer daxil edin:"))
         my_list = self.list
 
         for i in range(len(my_list)):
             for j in range(len(my_list)):
-                if (my_list[i] + my_list[j] == my_hedef) and (i != j):
+                if (my_list[i] + my_list[j] == my_target) and (i != j):
                     return f"list[{i}] = {my_list[i]}  ve list[{j}] = {my_list[j]}"
         return -1
 
