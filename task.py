@@ -14,26 +14,21 @@ class Main:
         self.list = []
 
     def list_al(self):
-        for i in range(5):
-            self.list.append(int(input(f"{i+1} ededi daxil edin:")))
+        # for i in range(5):
+        #     self.list.append(int(input(f"{i+1} ededi daxil edin:")))
+        self.list = [1, 2, 3, 4, 5]
 
     def list_goster(self):
         return self.list
 
     def hedef_deyer_yoxlama(self):
-        self.hedef_deyer = int(input("hedef deyeri daxil edin:"))
-        indeks_1 = randint(0, 4)
-        indeks_2 = randint(0, 4)
 
-        # * Ternary Operator
-        # return (
-        #     f"indeks_1: {indeks_1} , indeks_2: {indeks_2}"
-        #     if (self.list[indeks_1] + self.list[indeks_2]) == (self.hedef_deyer)
-        #     else -1
-        # )
+        self.hedef_deyer = int(input("hedef deyer daxil edin:"))
+        for i in range(len(self.list)):
+            for j in range(len(self.list)):
+                if self.list[i] + self.list[j] == self.hedef_deyer:
+                    return f"indeksler: {i} ve {j} elementler"
 
-        if (self.list[indeks_1] + self.list[indeks_2]) == self.hedef_deyer:
-            return f"indeks_1:{indeks_1} , indeks_2:{indeks_2}"
         else:
             return -1
 
