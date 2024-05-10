@@ -11,7 +11,7 @@ class Main:
     def __init__(self):
         self.list = []
 
-    def list_al(self):
+    def liste_menimset(self):
         # for i in range(5):
         #     self.list.append(int(input(f"{i+1} ededi daxil edin:")))
         # self.list = [1, 2, 3, 4, 5]
@@ -34,6 +34,6 @@ class Main:
 
 # -------------------------------------------------------------------------------------------------
 main = Main()
-main.list_al()
+main.liste_menimset()
 print(main.list_goster())
 print(main.hedef_deyer_yoxlama())
