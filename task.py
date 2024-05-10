@@ -1,3 +1,6 @@
+import itertools
+
+
 class Main:
     def __init__(self):
         self.list = []
@@ -14,10 +17,15 @@ class Main:
     def hedef_deyer_yoxlama(self):
 
         self.hedef_deyer = int(input("hedef deyer daxil edin:"))
-        for i in range(len(self.list)):
-            for j in range(len(self.list)):
-                if self.list[i] + self.list[j] == self.hedef_deyer:
-                    return f"indeksler: {i} ve {j} elementler"
+        # for i in range(len(self.list)):
+        #     for j in range(len(mylist)):
+        #         if self.list[i] + self.list[j] == self.hedef_deyer:
+        #             return f"indeksler: {i} ve {j} elementler"
+        # return -1
+        for numbers in itertools.combinations(self.list, 2):
+            if sum(numbers) == self.hedef_deyer:
+                print([self.list.index(number) for number in numbers])
+                return
 
         return -1
 
