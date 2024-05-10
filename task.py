@@ -4,7 +4,7 @@ class Main:
 
     def liste_menimset(self, mylist):
         # for i in range(5):
-        #     self.list.append(int(input(f"{i+1} ededi daxil edin:")))
+        #     self.list.append(int(input(f"{i+1} -ci ededi daxil edin:")))
         # self.list = [1, 2, 3, 4, 5]
         self.list = [i for i in mylist]
 
